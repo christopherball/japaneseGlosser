@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>Japanese Glosser</title>
+        <link rel="stylesheet" href="includes/index.css" />
+    </head>
+    <body>
+        <div id="app">
+            <h2>Japanese Glosser</h2>
+            <div id="controls">
+                <div class="color-picker-container">
+                    <div id="violetSquare" class="color-square violet selected">
+                        ■
+                    </div>
+                    <div id="blueSquare" class="color-square blue">■</div>
+                    <div id="greenSquare" class="color-square green">■</div>
+                    <div id="yellowSquare" class="color-square yellow">■</div>
+                    <div id="orangeSquare" class="color-square orange">■</div>
+                    <div id="redSquare" class="color-square red">■</div>
+                    <div class="checkboxContainer">
+                        <input
+                            type="checkbox"
+                            id="autoWithGlossCheckbox"
+                            title="Bypass that makes the Enter key, after text selection, jump to the gloss input while applying automatic color rotation for visual chunking." />
+                        <label for="autoWithGlossCheckbox">Auto</label>
+                    </div>
+                    <div class="checkboxContainer">
+                        <input
+                            type="checkbox"
+                            id="noColorCheckbox"
+                            title="Bypass that allows uncolored gloss to be applied." />
+                        <label for="noColorCheckbox">No Color</label>
+                    </div>
+                    <span id="lastSelectionTextPreview"></span>
+                </div>
+                <input id="textInput" placeholder="(Japanese)" />
+                <button id="addText">Add Text</button>
+                <div class="spacer"><br /></div>
+                <input id="glossInput" placeholder="(Gloss)" />
+                <button id="addGloss" disabled="true">Add Gloss</button>
+            </div>
+
+            <div class="container" id="container">
+                <div id="jpText" tabindex="0"></div>
+                <div class="gloss-layer" id="glossLayer"></div>
+            </div>
+        </div>
+        <script src="includes/index.js"></script>
+    </body>
+</html>
